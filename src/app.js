@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ModalBox from './index'
+import Modalbox from './index'
 
-ReactDOM.render(<ModalBox />, document.body)
+ReactDOM.render(<Modalbox isOpen={true} />, document.body)

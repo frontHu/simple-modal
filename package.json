@@ -1,11 +1,8 @@
 {
   "name": "simple-modal-react",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "一个基于react的弹出窗组件",
   "main": "dist/index.js",
-  "file": [
-    "dist"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
