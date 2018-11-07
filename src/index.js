@@ -58,9 +58,7 @@ class Modalbox extends React.Component {
   }
 
   render() {
-    return (
-      <div></div>
-    )
+    return null
   }
 }
 
