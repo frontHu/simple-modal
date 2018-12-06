@@ -1,6 +1,6 @@
 {
   "name": "simple-modal-react",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "一个基于react的弹出窗组件",
   "main": "dist/index.js",
   "scripts": {

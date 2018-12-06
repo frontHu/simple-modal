@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -72,7 +72,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
-  module.exports.entry = './src/index.js'
+  module.exports.entry = './src/modal/index.js'
   module.exports.output = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -82,7 +82,7 @@ if (process.env.NODE_ENV === 'production') {
     umdNamedDefine: true
   }
   module.exports.plugins = (module.exports.plugins || []).concat([
-    new ExtractTextPlugin('progressbar-react.css'),
+    new ExtractTextPlugin('modal.css'),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'

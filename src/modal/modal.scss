@@ -12,11 +12,12 @@
     background-color: #fff;
     border-radius: 5px;
     padding: 20px 30px;
-    width: 400px;
+    max-width: 560px;
     position: absolute;
     left: 50%;
     top: 40%;
     transform: translate3d(-50%, -50%, 0);
+    animation: fadeIn 0.4s ease-in-out;
 
     .modal-close {
       display: block;
@@ -26,10 +27,13 @@
       width: 40px;
       height: 36px;
       text-align: center;
-      color: #ddd;
+      color: rgba(0,0,0,.45);
       font: bold 20px/36px "simsun";
       transition: 0.1s;
       cursor: pointer;
+      &:hover {
+        color: rgba(0,0,0,1);
+      }
     }
 
     .modal-title {
@@ -38,8 +42,17 @@
       font-weight: bold;
     }
 
+    .modal-title-left {
+      text-align: left;
+    }
+    .modal-title-center {
+      text-align: center;
+    }
+
     .modal-content {
       padding: 24px 0px;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
 
     .modal-footer {
@@ -63,13 +76,39 @@
       }
 
       button {
-        margin: 0 20px;
-        padding: 6px 20px;
-        font-size: 16px;
+        margin: 0 5px;
+        padding: 6px 15px;
+        font-size: 14px;
         border-radius: 4px;
         border: 0;
         outline: none;
       }
     }
+    .modal-footer-left {
+      text-align: left;
+    }
+    .modal-footer-center {
+      text-align: center;
+    }
+    .modal-footer-right {
+      text-align: right;
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -55%)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%)
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .modal-body { 
+    width: 80%;
   }
 }
